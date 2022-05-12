@@ -9,17 +9,19 @@ import './game-page.css';
 const GamePage = () => {
   const game = useSelector((state) => state.game.currentGame);
 
+  const { title, video, image, genres, description } = game;
+
   if (!game) {
     return null;
   }
 
   return (
     <div className='game-page'>
-      <h1 className='game-page__title'>{game.title}</h1>
+      <h1 className='game-page__title'>{title}</h1>
       <div className='game-page__content'>
         <div className='game-page__left'>
           <iframe
-            src={game.video}
+            src={video}
             title='Yotube Video Player'
             frameBorder='0'
             width='90%'
@@ -27,10 +29,10 @@ const GamePage = () => {
           ></iframe>
         </div>
         <div className='game-page__right'>
-          <GameCover image={game.image} />
-          <p>{game.description}</p>
+          <GameCover image={image} />
+          <p>{description}</p>
           <p className='secondary-text'>Популярные метки этого продукта:</p>
-          {game.genres.map((genre) => (
+          {genres.map((genre) => (
             <GameGenre key={genre} genre={genre} />
           ))}
           <div className='game-page__buy-game'>

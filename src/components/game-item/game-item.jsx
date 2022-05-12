@@ -9,21 +9,23 @@ import { setCurrentGame } from '../../redux/games/reduce';
 import './game-item.css';
 
 const GameItem = ({ game }) => {
+  const { title, image, genres } = game;
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleClick = () => {
     dispatch(setCurrentGame(game));
-    navigate(`/app/${game.title}`);
+    navigate(`/app/${title}`);
   };
 
   return (
     <div className='game-item' onClick={handleClick}>
-      <GameCover image={game.image} />
+      <GameCover image={image} />
       <div className='game-item__details'>
-        <span className='game-item__title'>{game.title}</span>
+        <span className='game-item__title'>{title}</span>
         <div className='genre'>
-          {game.genres.map((genre) => (
+          {genres.map((genre) => (
             <GameGenre genre={genre} key={genre} />
           ))}
         </div>

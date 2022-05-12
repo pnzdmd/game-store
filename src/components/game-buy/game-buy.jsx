@@ -6,14 +6,15 @@ import Button from '../button/button';
 import './game-buy.css';
 
 const GameBuy = ({ game }) => {
+  const { id, price } = game;
   const dispatch = useDispatch();
   const items = useSelector((state) => state.cart.itemsInCart);
-  const isItemInCart = items.some((item) => item.id === game.id);
+  const isItemInCart = items.some((item) => item.id === id);
 
   const handleClick = (e) => {
     e.stopPropagation();
     if (isItemInCart) {
-      dispatch(deleteItemFromCart(game.id));
+      dispatch(deleteItemFromCart(id));
     } else {
       dispatch(setItemInCart(game));
     }
@@ -21,7 +22,7 @@ const GameBuy = ({ game }) => {
 
   return (
     <div className='game-buy'>
-      <span className='game-buy__price'>{game.price} руб.</span>
+      <span className='game-buy__price'>{price} руб.</span>
       <Button
         type={isItemInCart ? 'secondary' : 'primary'}
         onClick={handleClick}
