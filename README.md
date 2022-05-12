@@ -3,6 +3,7 @@
 ## В проекте используется:
 
 - React.js;
+- Redux.js;
 - JavaScript;
 - React Icons;
 - Семантическая разметка HTML5;
