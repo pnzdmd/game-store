@@ -2,8 +2,10 @@ import React from 'react';
 
 import './game-cover.css';
 
-const GameCover = () => {
-  return <div></div>;
+const GameCover = ({ image }) => {
+  return (
+    <div className='game-cover' style={{ backgroundImage: `url(${image})` }} />
+  );
 };
 
 export default GameCover;
