@@ -1,5 +1,7 @@
 # Проект SPA GAME-STORE
 
+![game-store](https://user-images.githubusercontent.com/93434868/168062399-fe2fd08d-7c4f-48e6-8c62-c8b3437f2f3c.gif)
+
 ## В проекте используется:
 
 - React.js;
