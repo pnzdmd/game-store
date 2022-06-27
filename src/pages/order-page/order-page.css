@@ -1,0 +1,10 @@
+.order-page {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 520px) {
+  .order-page {
+    width: 59%;
+  }
+}

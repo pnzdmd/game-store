@@ -8,3 +8,10 @@
 .game-genre:not(:last-child) {
   margin-right: 7px;
 }
+
+@media screen and (max-width: 440px) {
+  .game-genre {
+    font-size: 11px;
+    margin-top: 10px;
+  }
+}

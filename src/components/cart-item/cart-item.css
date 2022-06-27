@@ -10,3 +10,9 @@
   display: flex;
   align-items: center;
 }
+
+@media screen and (max-width: 400px) {
+  .cart-item span {
+    font-size: 14px;
+  }
+}

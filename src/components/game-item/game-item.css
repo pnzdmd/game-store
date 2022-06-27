@@ -39,3 +39,22 @@
   right: 0;
   bottom: -12px;
 }
+
+@media screen and (max-width: 820px) {
+  .game-item {
+    width: 80%;
+  }
+  .game-item:not(:last-child) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .game-item__title {
+    font-size: 14px;
+  }
+  .genre {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
